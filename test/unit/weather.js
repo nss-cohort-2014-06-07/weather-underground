@@ -74,5 +74,15 @@ describe('Weather', function(){
       });
     });
   });
+
+  describe('.moon', function(){
+    it('should return the current more phase', function(done){
+      Weather.moon(37203, function(phase){
+        expect(phase).to.be.ok;
+        expect(phase).to.be.a('string');
+        done();
+      });
+    });
+  });
 });
 
